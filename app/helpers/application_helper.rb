@@ -8,6 +8,6 @@ module ApplicationHelper
     super amount if currency.nil?
     main_currency = Currency.find_by_iso Spree::Config[:main_currency]
     options = options.merge(:unit => currency.symbol)
-    super (amount*(currency.rate/main_currency.rate)), options
+    super((amount*(currency.rate/main_currency.rate)), options)
   end
 end
