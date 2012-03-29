@@ -13,7 +13,7 @@ Installation
 ---------
 Add to Gemfile
 
-    gem "multicurrency", :git => "git://github.com/rdegan/spree_multicurrency.git"
+    gem "spree_multicurrency", :git => "git://github.com/rdegan/spree_multicurrency.git"
     bundle install
 
     rails g multicurrency:install
