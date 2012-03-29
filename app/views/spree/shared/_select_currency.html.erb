@@ -1,5 +1,5 @@
 <%= form_tag :update_currency, :id => 'multicurrency' do %>
     <% current_value = session[:current_currency].nil? ? Spree::Config[:main_currency] : session[:current_currency] %>
-    <%= select_tag :current_currency, options_from_collection_for_select(Currency.all, :iso, :iso, current_value),
+    <%= select_tag :current_currency, options_from_collection_for_select(Currency.order('iso'), :iso, :iso, current_value),
                    :class => 'multicurrency_select' %>
 <% end %>

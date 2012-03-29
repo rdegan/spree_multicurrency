@@ -1,5 +1,5 @@
 <% type = Spree::Config.preference_type(:main_currency) %>
 <%= label_tag(:main_currency, t(:main_currency) + ': ') + tag(:br) if type != :boolean %>
-<%= select_tag :main_currency, options_from_collection_for_select(Currency.all, :iso, :iso,
+<%= select_tag :main_currency, options_from_collection_for_select(Currency.order('iso'), :iso, :iso,
                                                     Spree::Config[:main_currency]), :class => 'multicurrency_select' %>
 
