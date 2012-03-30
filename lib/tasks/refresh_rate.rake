@@ -12,7 +12,7 @@ namespace :spree_multicurrency do
       c.symbol = k
       c.symbol = [8364].pack("U") if k == "EUR"
       c.symbol = [36].pack("U") if k == "USD"
-      c.symbol = [163].pack("U") if k == "GBR"
+      c.symbol = [163].pack("U") if k == "GBP"
       c.rate = v
       c.save
       puts "update #{k}"
