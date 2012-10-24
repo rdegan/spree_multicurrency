@@ -9,17 +9,22 @@ The main currency can be set by the backend admin -> configuration -> configurat
 
 In front end will appear a select near to search bar.
 
-Installation
----------
-Add to Gemfile
+Install
+=======
 
-    gem "spree_multicurrency", :git => "git://github.com/rdegan/spree_multicurrency.git"
-    bundle install
+1. Add the following to your Gemfile
+<pre>
+	gem 'spree_multicurrency', :git => 'git://github.com/rdegan/spree_multicurrency.git'
+</pre>
+2. Run `bundle install`
+3. To copy and apply migrations run:
+<pre>
+	rails g spree_multicurrency:install
+</pre>
+4. Create/edit exchange rate
+<pre>
+	rake spree_multicurrency:refresh_currency_rate
+</pre>
 
-    rails g multicurrency:install
-    rake db:migrate
-
-Create/edit exchange rate
----
-    rake spree_multicurrency:refresh_currency_rate
+Copyright (c) 2012 [Riccardo Degan], released under the New BSD License
 
