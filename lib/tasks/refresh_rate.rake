@@ -8,7 +8,7 @@ namespace :spree_multicurrency do
     end
 
     hash['rates'].each do |k,v|
-      c = SpreeCurrency.find_or_initialize_by_iso k
+      c = Spree::Currency.find_or_initialize_by_iso k
       c.symbol = k
       c.symbol = [8364].pack("U") if k == "EUR"
       c.symbol = [36].pack("U") if k == "USD"
