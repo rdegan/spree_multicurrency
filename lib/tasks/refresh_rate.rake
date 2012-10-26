@@ -1,7 +1,7 @@
 namespace :spree_multicurrency do
   desc "Refresh currency rate"
   task :refresh_currency_rate => :environment do
-    resp = Net::HTTP.get_response(URI.parse('http://openexchangerates.org/latest.json'))
+    resp = Net::HTTP.get_response(URI.parse("http://openexchangerates.org/latest.json?app_id=#{ENV["APP_ID"]}"))
     hash = JSON.parse(resp.body)
     if hash.has_key? 'Error'
           raise "web service error"

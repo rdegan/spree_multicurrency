@@ -21,9 +21,9 @@ Install
 <pre>
 	rails g spree_multicurrency:install
 </pre>
-4. Create/edit exchange rate
+4. Create/edit exchange rate (register at http://openexchangerates.org to obtain APP_ID)
 <pre>
-	rake spree_multicurrency:refresh_currency_rate
+	rake spree_multicurrency:refresh_currency_rate APP_ID=your_app_id
 </pre>
 
 Copyright (c) 2012 [Riccardo Degan], released under the New BSD License
